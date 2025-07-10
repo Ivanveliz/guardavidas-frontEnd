@@ -1,0 +1,19 @@
+Resumen del flujo
+El navegador carga la app y React renderiza el árbol desde index.tsx.
+
+BrowserRouter detecta la URL actual y pasa el control al componente Router.
+
+Router verifica si la ruta es pública (/login) o privada.
+
+Si es privada, pasa por PrivateRoute:
+
+Si el usuario NO está autenticado, redirige a /login.
+
+Si el usuario SÍ está autenticado, renderiza Layout y la ruta específica.
+
+Dentro de Layout, el contenido correspondiente se renderiza en el <Outlet />.
+
+El usuario puede navegar por la app, el contexto de autenticación mantiene el estado de login activo.
+
+
+--------------------------
