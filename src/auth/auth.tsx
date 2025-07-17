@@ -13,7 +13,7 @@ export const fakeLogin = async (email: string, password: string): Promise<{ toke
                     predio: 'Florida',
                     direccion: 'Viamonte 123',
                     numeroLibreta: 12312312,
-                    role: "admin",
+                    role: "Admin",
                     cargo: 'Director',
                     email: 'prueba@gmail.com'
                     

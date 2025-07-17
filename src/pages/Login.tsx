@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-import { fakeLogin } from "../auth/auth";
+import { enterLogin } from "../services/api";
+
+
 
 //mensaje de error
 function getErrorMessage(error: unknown): string {
@@ -44,7 +46,7 @@ export default function Login() {
         setLoading(true); // Activar loading para bloquear inputs y botón
         try {
             //llamamos a la API falsa
-            const { token, user } = await fakeLogin(email, password)
+            const { token, user } = await enterLogin(email, password)
             
             //se guarda el usuario que se trajo en el contexto de autentificacion
             login(user, token)

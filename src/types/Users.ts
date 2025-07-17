@@ -6,7 +6,7 @@ export interface User {
     predio: string;
     direccion: string;
     numeroLibreta: number;
-    role: "admin" | "user";
-    cargo: string;  
+    role: 'AdminGneral' | 'Admin' | 'Usuario';
+    cargo: string;
     email: string;
 }
